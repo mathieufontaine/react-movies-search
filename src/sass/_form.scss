@@ -1,0 +1,44 @@
+/* /// Form /// */
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+}
+
+.label {
+  font-size: 1.2rem;
+  display: none;
+}
+
+.input {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  border: 3px solid gray;
+  // margin: 0 auto;
+  margin-right: 1rem;
+  outline: none;
+  background-color: white;
+  width: 80%;
+}
+
+.button {
+  font-size: 1.6rem;
+  padding: 1rem;
+  background: $primary;
+  border: 3px solid $primary;
+  color: white;
+  border: none;
+  width: 20%;
+  // margin: 0 auto;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: rgb(222, 42, 42);
+  }
+}

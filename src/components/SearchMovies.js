@@ -30,11 +30,8 @@ export default function SearchMovies() {
   return (
     <div>
       <div className="search">
-        <h2>Search for any Movie: </h2>
+        {/* <h2>Search for any Movie:</h2> */}
         <form className="form">
-          <label htmlFor="query" className="label">
-            Movie Name
-          </label>
           <input
             type="text"
             className="input"
@@ -50,15 +47,25 @@ export default function SearchMovies() {
       </div>
       {query ? (
         movies && movies.length !== 0 ? (
-          <MoviesList movies={movies} />
+          <>
+            <div className="message">
+              <h2>
+                <span>{movies.length}</span> movies found for{" "}
+                <span>'{query}'</span>
+              </h2>
+            </div>
+            <MoviesList movies={movies} />
+          </>
         ) : (
-          <div className="error-message">
-            <h2>No Movies found 😢</h2>
+          <div className="message error">
+            <h2>
+              No Movies found for <span>'{query}' 😢</span>
+            </h2>
           </div>
         )
       ) : (
-        <div className="error-message">
-          <h2>Type something above to search for movies 🔎</h2>
+        <div className="message error">
+          <h2>Search for any Movie in the form above 🔎</h2>
         </div>
       )}
     </div>

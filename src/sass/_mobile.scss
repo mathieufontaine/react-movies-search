@@ -1,0 +1,52 @@
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 785px) {
+  .container {
+    width: 100%;
+    padding: 30px 60px;
+  }
+}
+
+@media (max-width: 585px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  .card {
+    padding: 2rem;
+
+    .img {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header .title {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  .search form {
+    width: 100%;
+  }
+  .card {
+    display: block;
+    margin: 20px auto;
+    .img {
+      margin-bottom: 20px;
+    }
+    .content {
+      margin-left: 0;
+      .title {
+        text-align: center;
+      }
+    }
+  }
+}

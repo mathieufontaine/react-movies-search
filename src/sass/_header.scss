@@ -1,0 +1,19 @@
+.header {
+  z-index: 1;
+
+  background: radial-gradient(
+    circle,
+    $primary 46%,
+    rgba(236, 114, 114, 1) 100%
+  );
+  color: white;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
