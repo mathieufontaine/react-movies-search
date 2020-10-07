@@ -1,12 +1,16 @@
 import React from "react";
 import SearchMovies from "./components/SearchMovies";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="container">
-      <h1 className="title">Movies Search App</h1>
-      <SearchMovies />
-    </div>
+    <>
+      <div className="overlay"></div>
+      <Header />
+      <div className="container">
+        <SearchMovies />
+      </div>
+    </>
   );
 }
 

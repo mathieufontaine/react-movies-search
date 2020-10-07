@@ -9,13 +9,26 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #333;
-  color: #333;
+  background: url("../img/popcorn.jpg") fixed center center/cover;
+  color: rgb(74, 73, 73);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.425);
+  z-index: -1;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 p {
@@ -26,18 +39,39 @@ small {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 0px auto;
+  width: 70%;
   padding: 40px 120px;
-  background-color: lightsteelblue;
+  background-color: rgba(255, 255, 255, 0.5);
+  min-height: 90vh;
+  border-radius: 0px;
+  z-index: 1;
+}
+
+.header {
+  z-index: 1;
+
+  background: radial-gradient(
+    circle,
+    rgba(218, 67, 67, 1) 46%,
+    rgba(236, 114, 114, 1) 100%
+  );
+  color: white;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
-  font-size: 4.4rem;
+  font-size: 4rem;
   text-align: center;
 }
 
 /* /// Form /// */
+.search {
+  padding: 0rem 4rem;
+}
 
 .form {
   display: grid;
@@ -51,28 +85,30 @@ small {
 
 .input {
   font-size: 1.6rem;
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   line-height: 2.5rem;
   border-radius: 20px;
-  border: 1px solid #ddd;
+  border: 3px solid gray;
   margin-bottom: 1rem;
+  outline: none;
+  background-color: white;
 }
 
 .button {
-  background-color: rgb(46, 44, 44);
+  background: rgba(218, 67, 67, 1);
   color: white;
+  border: none;
   padding: 1rem 2rem;
-  border: 1px solid rgb(46, 44, 44, 0.8);
-  border-radius: 10px;
+  border-radius: 20px;
+  outline: none;
   font-size: 1.4rem;
   cursor: pointer;
-  transition: background-color 250ms;
+  transition: background-color 0.5s ease;
 }
 
 .button:hover {
-  background-color: rgb(21, 20, 20);
+  background-color: rgb(222, 42, 42);
 }
-
 @media (min-width: 786px) {
   .form {
     grid-template-columns: 6fr 1fr;
@@ -93,17 +129,18 @@ small {
   display: flex;
   padding: 2rem 4rem;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px grey;
+  // box-shadow: 1px 1px 5px grey;
   margin-bottom: 2rem;
   background-color: white;
+  color: black;
 }
 
 .card--img {
   /* margin: 0 auto; */
   display: block;
-  height: 300px;
+  height: 200px;
   margin: 0 20px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .card--content {
@@ -112,11 +149,19 @@ small {
 
 .card--title {
   margin-top: 0;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .card--desc {
   font-size: 1.5rem;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 500px;
 }
 
 @media (max-width: 785px) {
