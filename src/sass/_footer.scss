@@ -1,0 +1,29 @@
+.footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  height: 5vh;
+  width: 100%;
+  margin: 0rem auto;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.488);
+  p {
+    margin: 0;
+  }
+  .logos {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    .fa {
+      font-size: 2rem;
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import SearchMovies from "./components/SearchMovies";
-import Header from "./components/Header";
+import Header from "./components/Layout/Header";
+import Footer from "./components/Layout/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="container">
         <SearchMovies />
       </div>
+      <Footer />
     </>
   );
 }
